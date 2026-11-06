@@ -634,9 +634,9 @@ export default function DanfeButton({ xmlContent, logoPath }: DanfeButtonProps) 
 
 ### **Node.js**
 
-- ✅ **Versão Mínima**: Node.js 14+
-- ✅ **Recomendado**: Node.js 18+ LTS
-- ✅ **TypeScript**: 4.0+
+- ✅ **Versão Mínima**: Node.js 20.19+ ou 22.12+
+- ✅ **Recomendado**: Node.js 22 LTS ou superior
+- ✅ **TypeScript**: 7.0+ no desenvolvimento da biblioteca
 
 ### **Formatos XML Suportados**
 
@@ -671,6 +671,7 @@ export default function DanfeButton({ xmlContent, logoPath }: DanfeButtonProps) 
 ```bash
 npm run build     # Compilar TypeScript
 npm run test      # Executar testes
+npm run lint      # Analisar o código com Oxlint
 npm run prettier  # Formatar código
 npm run type      # Verificar tipos
 ```

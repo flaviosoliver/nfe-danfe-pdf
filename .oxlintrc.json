@@ -1,0 +1,25 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true,
+    "node": true
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "ignorePatterns": ["dist", "lib", "node_modules", "*.js"],
+  "rules": {
+    "no-inner-declarations": "off",
+    "no-irregular-whitespace": "off",
+    "no-unused-vars": "off",
+    "typescript/ban-ts-comment": "off",
+    "typescript/ban-types": "off",
+    "typescript/explicit-module-boundary-types": "off",
+    "typescript/no-explicit-any": "off",
+    "typescript/no-namespace": "off",
+    "typescript/no-non-null-assertion": "off"
+  }
+}
