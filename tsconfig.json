@@ -6,6 +6,7 @@
     "declaration": true,
     "sourceMap": false,
     "outDir": "./lib",
+    "rootDir": "./src",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
@@ -14,7 +15,8 @@
       "ES2021",
       "ESNext.AsyncIterable"
     ],
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
+    "customConditions": ["node"],
     "composite": false,
     "removeComments": true,
     "noImplicitAny": false,

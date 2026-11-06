@@ -24,36 +24,32 @@
     "postversion": "git push && git push --tags && npm run publish",
     "clean-lib": "npx rimraf lib",
     "build": "npm run clean-lib && tsc -p tsconfig.json && npm run copy-fonts",
+    "lint": "oxlint",
     "prettier": "prettier src/**/*.{js,ts} --write",
     "publish": "npm adduser && npm publish --access public",
     "type": "tsc --project tsconfig.json",
     "copy-fonts": "copyfiles -u 1 src/**/*.ttf lib/",
-    "test-pdf": "ts-node-dev --respawn --transpile-only ./tests/pdf.test.ts",
-    "test": "ts-node ./tests/pdf.test.ts"
+    "test-pdf": "tsx watch ./tests/pdf.test.ts",
+    "test": "tsx ./tests/pdf.test.ts"
   },
   "dependencies": {
-    "bwip-js": "4.2.0",
-    "date-fns": "4.1.0",
+    "bwip-js": "4.11.4",
+    "date-fns": "4.4.0",
     "ordate": "^0.0.1",
-    "pdfkit": "0.17.2",
+    "pdfkit": "0.20.2",
     "qrcode": "1.5.4",
     "xml2js": "0.6.2"
   },
   "devDependencies": {
-    "@types/node": "22.0.0",
-    "@types/pdfkit": "0.17.3",
-    "@types/qrcode": "1.5.5",
+    "@types/node": "26.6.6",
+    "@types/pdfkit": "0.17.7",
+    "@types/qrcode": "1.5.6",
     "@types/xml2js": "0.4.14",
-    "@typescript-eslint/eslint-plugin": "8.44.1",
-    "@typescript-eslint/parser": "8.44.1",
     "copyfiles": "2.4.1",
-    "eslint": "9.36.0",
-    "eslint-config-prettier": "10.1.8",
-    "eslint-plugin-prettier": "5.5.4",
-    "prettier": "3.6.2",
-    "rimraf": "5.0.0",
-    "ts-node": "10.9.1",
-    "ts-node-dev": "^2.0.0",
-    "typescript": "5.9.2"
+    "oxlint": "1.92.0",
+    "prettier": "3.9.10",
+    "rimraf": "6.1.4",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
   }
 }
